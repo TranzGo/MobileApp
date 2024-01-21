@@ -49,12 +49,16 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.9,
+                height: 40,
                 child: MyTextField(
                   controller: emailController,
                   hintText: 'Email',
                   obscureText: false,
                   keyboardType: TextInputType.emailAddress,
-                  prefixIcon: const Icon(CupertinoIcons.mail_solid),
+                  prefixIcon: const Icon(
+                    CupertinoIcons.mail_solid,
+                    color: AppColors.primaryColor,
+                  ),
                   errorMsg: _errorMsg,
                   validator: (val) {
                     if (val!.isEmpty) {
@@ -72,12 +76,16 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.9,
+                height: 40,
                 child: MyTextField(
                   controller: passwordController,
                   hintText: 'Password',
                   obscureText: obscurePassword,
                   keyboardType: TextInputType.visiblePassword,
-                  prefixIcon: const Icon(CupertinoIcons.lock_fill),
+                  prefixIcon: const Icon(
+                    CupertinoIcons.lock_fill,
+                    color: AppColors.primaryColor,
+                  ),
                   errorMsg: _errorMsg,
                   validator: (val) {
                     if (val!.isEmpty) {
@@ -90,6 +98,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     return null;
                   },
                   suffixIcon: IconButton(
+                    color: AppColors.primaryColor,
                     onPressed: () {
                       setState(() {
                         obscurePassword = !obscurePassword;
@@ -108,6 +117,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 30,
               ),
               AppButton(
+                width: MediaQuery.of(context).size.width * 0.9,
                 onPressed: () {},
                 label: 'Login',
                 isText: true,
@@ -116,6 +126,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 10,
               ),
               IconButton(
+                color: AppColors.primaryColor,
                 onPressed: () {},
                 icon: Icon(
                   Icons.fingerprint,
