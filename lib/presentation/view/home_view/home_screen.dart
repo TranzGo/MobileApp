@@ -47,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             Row(
                               children: [
                                 Text(
-                                  'Good morning',
+                                  'Good Morning',
                                   style: AppText.extraBold.copyWith(
                                       fontSize: 16, letterSpacing: 0.092),
                                 ),
