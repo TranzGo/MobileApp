@@ -110,14 +110,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    quickAccessContainer(
-                        icon: Image.asset(
-                          'assets/icons/phoneIcon.png',
-                          height: 16,
-                          width: 16,
-                          color: AppColors.primaryColor,
-                        ),
-                        text: 'Airtime'),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/airTime');
+                      },
+                      child: quickAccessContainer(
+                          icon: Image.asset(
+                            'assets/icons/phoneIcon.png',
+                            height: 16,
+                            width: 16,
+                            color: AppColors.primaryColor,
+                          ),
+                          text: 'Airtime'),
+                    ),
                     quickAccessContainer(
                         icon: Image.asset(
                           'assets/icons/search.png',

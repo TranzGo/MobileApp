@@ -48,7 +48,7 @@ class AccountCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               GestureDetector(
-                onTap: (){
+                onTap: () {
                   Navigator.pushNamed(context, '/sendView');
                 },
                 child: Container(
