@@ -9,6 +9,7 @@ import 'package:tranzgoo/presentation/view/home_view/fund_account.dart';
 import 'package:tranzgoo/presentation/view/home_view/home_screen.dart';
 import 'package:tranzgoo/presentation/view/home_view/send_screen.dart';
 import 'package:tranzgoo/presentation/view/services/airtime_view.dart';
+import 'package:tranzgoo/presentation/view/services/data_view.dart';
 
 class AppRoutes {
   static const String splashView = '/splashView';
@@ -21,6 +22,7 @@ class AppRoutes {
   static const String fundAccountView = '/fundAccountView';
   static const String sendView = '/sendView';
   static const String airTime = '/airTime';
+  static const String dataView = '/dataView';
 
   static Map<String, WidgetBuilder> getRoutes() {
     return {
@@ -34,6 +36,7 @@ class AppRoutes {
       AppRoutes.fundAccountView: (_) => const FundAccount(),
       AppRoutes.sendView: (_) => const SendView(),
       AppRoutes.airTime: (_) => const AirTime(),
+      AppRoutes.dataView: (_) => const DataView(),
     };
   }
 }

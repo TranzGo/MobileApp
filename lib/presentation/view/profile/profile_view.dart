@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tranzgoo/utils/theme/app_colors.dart';
 import 'package:tranzgoo/utils/theme/app_style.dart';
+import 'package:tranzgoo/utils/widget/app_toggleswitch.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -118,10 +119,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 title: 'Settings',
                 subTitle: 'Security, Notification'),
             settingsWidget(
-                child: Image.asset('assets/icons/Vector (1).png'),
-                title: 'Dark Mode',
-                subTitle: 'Use the toggle to turn on/off',
-                icon: ToggleButtons(isSelected: const [], children: const [])),
+              child: Image.asset('assets/icons/Vector (1).png'),
+              title: 'Dark Mode',
+              subTitle: 'Use the toggle to turn on/off',
+              icon: const AppToggleSwitch(),
+            ),
             settingsWidget(
                 child: Image.asset('assets/icons/bx_support.png'),
                 title: 'Support',

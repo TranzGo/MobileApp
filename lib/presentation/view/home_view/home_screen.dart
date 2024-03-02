@@ -123,12 +123,15 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           text: 'Airtime'),
                     ),
-                    quickAccessContainer(
-                        icon: Image.asset(
-                          'assets/icons/search.png',
-                          color: AppColors.primaryColor,
-                        ),
-                        text: 'Data'),
+                    GestureDetector(
+                      onTap: () => {Navigator.pushNamed(context, '/dataView')},
+                      child: quickAccessContainer(
+                          icon: Image.asset(
+                            'assets/icons/search.png',
+                            color: AppColors.primaryColor,
+                          ),
+                          text: 'Data'),
+                    ),
                     quickAccessContainer(
                         icon: Image.asset(
                           'assets/icons/ph_swap-fill.png',

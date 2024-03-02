@@ -36,16 +36,20 @@ class _ServiceScreenState extends State<ServiceScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  serviceContainer(Image.asset('assets/icons/phoneIcon.png'),
-                      'Airtime', () => null),
-                  serviceContainer(Image.asset('assets/icons/internet.png'),
-                      'Data', () => null),
+                  serviceContainer(
+                      Image.asset('assets/icons/phoneIcon.png'),
+                      'Airtime',
+                      () => {Navigator.pushNamed(context, '/airTime')}),
+                  serviceContainer(
+                      Image.asset('assets/icons/internet.png'),
+                      'Data',
+                      () => {Navigator.pushNamed(context, '/dataView')}),
                   serviceContainer(
                       Image.asset(
                         'assets/icons/swap.png',
                       ),
                       'Airtime2Cash',
-                      () => null)
+                      () => null),
                 ],
               ),
               const SizedBox(

@@ -52,10 +52,10 @@ class _AppTextFieldState extends State<AppTextField> {
             borderRadius: BorderRadius.circular(12),
           ),
           hintStyle: AppText.extraBold
-              .copyWith(color: AppColors.primaryColor, fontSize: 14),
+              .copyWith(color: AppColors.grey300, fontSize: 14),
           enabledBorder: OutlineInputBorder(
             borderSide: const BorderSide(
-                color: AppColors.primaryColor, style: BorderStyle.solid),
+                color: AppColors.grey400, style: BorderStyle.solid),
             borderRadius: BorderRadius.circular(12),
           ),
           prefixIcon: Padding(
