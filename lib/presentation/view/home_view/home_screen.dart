@@ -132,12 +132,17 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           text: 'Data'),
                     ),
-                    quickAccessContainer(
-                        icon: Image.asset(
-                          'assets/icons/ph_swap-fill.png',
-                          color: AppColors.primaryColor,
-                        ),
-                        text: 'Airtime2cash'),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/airtime2cashView');
+                      },
+                      child: quickAccessContainer(
+                          icon: Image.asset(
+                            'assets/icons/ph_swap-fill.png',
+                            color: AppColors.primaryColor,
+                          ),
+                          text: 'Airtime2cash'),
+                    ),
                     quickAccessContainer(
                         icon: const Icon(
                           Icons.more_horiz,

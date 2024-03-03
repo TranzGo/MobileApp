@@ -49,7 +49,8 @@ class _ServiceScreenState extends State<ServiceScreen> {
                         'assets/icons/swap.png',
                       ),
                       'Airtime2Cash',
-                      () => null),
+                      () =>
+                          {Navigator.pushNamed(context, '/airtime2cashView')}),
                 ],
               ),
               const SizedBox(

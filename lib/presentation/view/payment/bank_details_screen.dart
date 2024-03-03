@@ -5,26 +5,20 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tranzgoo/utils/theme/app_colors.dart';
 import 'package:tranzgoo/utils/theme/app_style.dart';
 import 'package:tranzgoo/utils/widget/app_button.dart';
-import 'package:tranzgoo/utils/widget/app_network_providers.dart';
 import 'package:tranzgoo/utils/widget/app_phone_field.dart';
 
-class Airtime2cash extends StatefulWidget {
-  const Airtime2cash({Key? key}) : super(key: key);
-
-  @override
-  State<Airtime2cash> createState() => _Airime2cashState();
-}
-
-class _Airime2cashState extends State<Airtime2cash> {
-  final TextEditingController sendamount = TextEditingController();
+class BankDetails extends StatelessWidget {
+  const BankDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final TextEditingController sendamount = TextEditingController();
+
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
           title: const Text(
-            'Airtime2Cash',
+            'Bank Details',
             style: AppText.extraBold,
           ),
           actions: [
@@ -43,20 +37,15 @@ class _Airime2cashState extends State<Airtime2cash> {
             padding: const EdgeInsets.fromLTRB(20, 20, 20, 100),
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Center(
+                child: Text('Plese Fill Correctly'),
+              ),
               SizedBox(height: 20),
-              Row(
-                children: [
-                  const AppNetworkProviders(),
-                ],
-              ),
-              SizedBox(
-                height: 20,
-              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                    'Amount to Convert',
+                    'Bank Details',
                     style: AppText.mediumStyle.copyWith(letterSpacing: 0.09),
                   ),
                 ],
@@ -67,7 +56,7 @@ class _Airime2cashState extends State<Airtime2cash> {
                   AppPhoneField(
                     textCenter: false,
                     controller: sendamount,
-                    hintText: 'Min: N1000',
+                    hintText: 'e.g UBA',
                     width: 330.w,
                     height: 50.h,
                   ),
@@ -78,7 +67,7 @@ class _Airime2cashState extends State<Airtime2cash> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                    'Phone Number',
+                    'Account NAme',
                     style: AppText.mediumStyle.copyWith(letterSpacing: 0.09),
                   ),
                 ],
@@ -89,7 +78,29 @@ class _Airime2cashState extends State<Airtime2cash> {
                   AppPhoneField(
                     textCenter: false,
                     controller: sendamount,
-                    hintText: '0700-000-000',
+                    hintText: 'e.g JACHIMMA PRINCE',
+                    width: 330.w,
+                    height: 50.h,
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    'Account Number',
+                    style: AppText.mediumStyle.copyWith(letterSpacing: 0.09),
+                  ),
+                ],
+              ),
+              SizedBox(height: 10),
+              Row(
+                children: [
+                  AppPhoneField(
+                    textCenter: false,
+                    controller: sendamount,
+                    hintText: 'e.g. 2135907016',
                     width: 330.w,
                     height: 50.h,
                   ),
@@ -108,7 +119,7 @@ class _Airime2cashState extends State<Airtime2cash> {
                     child: Center(
                       child: AppButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, '/bankdetailsView');
+                          Navigator.pushNamed(context, '/confirmView');
                         },
                         label: 'Next',
                         isText: true,

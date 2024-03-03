@@ -16,7 +16,6 @@ class AirTime extends StatefulWidget {
 }
 
 class _AirTimeState extends State<AirTime> {
-  final TextEditingController tranzgoId = TextEditingController();
   final TextEditingController sendamount = TextEditingController();
   @override
   Widget build(BuildContext context) {

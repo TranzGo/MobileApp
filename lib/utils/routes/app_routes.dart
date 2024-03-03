@@ -8,10 +8,13 @@ import 'package:tranzgoo/presentation/view/home_view/base_screen.dart';
 import 'package:tranzgoo/presentation/view/home_view/fund_account.dart';
 import 'package:tranzgoo/presentation/view/home_view/home_screen.dart';
 import 'package:tranzgoo/presentation/view/home_view/send_screen.dart';
+import 'package:tranzgoo/presentation/view/payment/confirm_info_screen.dart';
 import 'package:tranzgoo/presentation/view/services/airtime_view.dart';
 import 'package:tranzgoo/presentation/view/services/data_view.dart';
 import 'package:tranzgoo/presentation/view/payment/review_screen.dart';
 import 'package:tranzgoo/presentation/view/payment/successful_screen.dart';
+import 'package:tranzgoo/presentation/view/payment/bank_details_screen.dart';
+import 'package:tranzgoo/presentation/view/services/airtime2cash_view.dart';
 
 class AppRoutes {
   static const String splashView = '/splashView';
@@ -27,6 +30,9 @@ class AppRoutes {
   static const String dataView = '/dataView';
   static const String reView = '/reView';
   static const String successView = '/successView';
+  static const String airtime2cashView = '/airtime2cashView';
+  static const String bankdetailsView = '/bankdetailsView';
+  static const String confirmView = '/confirmView';
 
   static Map<String, WidgetBuilder> getRoutes() {
     return {
@@ -43,6 +49,9 @@ class AppRoutes {
       AppRoutes.dataView: (_) => const DataView(),
       AppRoutes.reView: (_) => const ReView(),
       AppRoutes.successView: (_) => const SuccessView(),
+      AppRoutes.airtime2cashView: (_) => const Airtime2cash(),
+      AppRoutes.bankdetailsView: (_) => const BankDetails(),
+      AppRoutes.confirmView: (_) => const ConfirmInfo(),
     };
   }
 }

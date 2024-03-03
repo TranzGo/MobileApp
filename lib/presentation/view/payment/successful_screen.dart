@@ -105,18 +105,26 @@ class SuccessView extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Image.asset(
-                          'assets/images/Like.png',
-                          width: 40,
-                          height: 40,
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pushNamed(context, '/homeView');
+                          },
+                          child: Image.asset(
+                            'assets/images/Like.png',
+                            width: 40,
+                            height: 40,
+                          ),
                         ),
                         SizedBox(
                           width: 30,
                         ),
-                        Image.asset(
-                          'assets/images/Dislike.png',
-                          width: 40,
-                          height: 40,
+                        GestureDetector(
+                          onTap: () {},
+                          child: Image.asset(
+                            'assets/images/Dislike.png',
+                            width: 40,
+                            height: 40,
+                          ),
                         ),
                       ],
                     ),
