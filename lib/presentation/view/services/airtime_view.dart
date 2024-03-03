@@ -6,6 +6,7 @@ import 'package:tranzgoo/utils/widget/app_phone_field.dart';
 import 'package:tranzgoo/utils/widget/app_textfield.dart';
 import 'package:tranzgoo/utils/widget/app_toggleswitch.dart';
 import 'package:tranzgoo/utils/widget/app_network_providers.dart';
+import 'package:tranzgoo/utils/widget/app_button.dart';
 
 class AirTime extends StatefulWidget {
   const AirTime({super.key});
@@ -211,13 +212,12 @@ class _AirTimeState extends State<AirTime> {
                         borderRadius: BorderRadius.circular(10),
                         color: AppColors.primaryColor),
                     child: Center(
-                      child: Text(
-                        'Continue',
-                        textAlign: TextAlign.center,
-                        style: AppText.mediumStyle.copyWith(
-                            color: AppColors.whiteColor,
-                            fontSize: 18,
-                            letterSpacing: 0.09),
+                      child: AppButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/reView');
+                        },
+                        label: 'Continue',
+                        isText: true,
                       ),
                     ),
                   ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tranzgoo/utils/theme/app_colors.dart';
 import 'package:tranzgoo/utils/theme/app_style.dart';
+import 'package:tranzgoo/utils/widget/app_button.dart';
 import 'package:tranzgoo/utils/widget/app_phone_field.dart';
 import 'package:tranzgoo/utils/widget/app_toggleswitch.dart';
 import 'package:tranzgoo/utils/widget/app_network_providers.dart';
@@ -208,13 +209,12 @@ class _DataViewState extends State<DataView> {
                         borderRadius: BorderRadius.circular(10),
                         color: AppColors.primaryColor),
                     child: Center(
-                      child: Text(
-                        'Continue',
-                        textAlign: TextAlign.center,
-                        style: AppText.mediumStyle.copyWith(
-                            color: AppColors.whiteColor,
-                            fontSize: 18,
-                            letterSpacing: 0.09),
+                      child: AppButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/reView');
+                        },
+                        label: 'Continue',
+                        isText: true,
                       ),
                     ),
                   ),
